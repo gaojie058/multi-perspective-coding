@@ -1,0 +1,50 @@
+<task2>
+# Task Description
+Analyze the codes and justifications from following every Role submission and decide which reflect **consensus** and which show **divergence**.
+
+Multiple role-based annotators each provided a list of codes with corresponding justifications for the same target text.
+• Target Text:
+"[Target Text]"
+
+• Role submissions:
+"[codes and justifications]"
+
+# Requirements
+## Categorisation rules
+**Do not** include role names, job titles, or organizational references in the code label.
+✅ **Agreed**  
+• Select codes that are **semantically similar** and **appear** in two or more roles.
+• Merge **near-synonymous codes** into one unified label with a single combined justification.
+• **Keep at most 3** Agreed codes, ranked by the number of supporting roles.
+
+⚠ **Disagreement**  
+• Select codes that **closely align with the target text** yet still **diverge in meaning, viewpoint, or granularity**.
+• **Briefly state why each code differs** (e.g., different emphasis, abstraction level mismatch, conflicting interpretation).
+• **Keep at most 3** disagreed codes, prioritizing those that **remain textually grounded** yet **illustrate meaningful divergence**, rather than the most extreme differences.
+
+## Justification requirement
+• Every code must include **direct textual definition ** from the Target Text to **support or justify** the interpretation.
+• You must quote one **full sentence** or **a key phrase (1–8 words)** directly from the Target Text, enclosing it in **square brackets** [] (e.g., [The interface encourages user trust.]).
+• The quotation should be **integrated into the reasoning**, explaining **how it supports an Agreed interpretation** or **motivates a Disagreed one**.
+• **Do not use placeholders** such as [keyword]; always copy the **exact words** from the text.
+• Optionally, you may add a **brief analytical explanation** (e.g., focus difference,” “abstraction mismatch,” “alternative causal inference”) to clarify the **nature of agreement or divergence**.
+🔒 **Total output ≤ 800 tokens**
+
+# Output Format
+Please output your response **strictly in the following JSON format**:
+```json
+{
+  "Agreed": [
+    {
+      "code": "merged_code_label_1",
+      "definition": "Unified definition, citing text if helpful."
+    }
+  ],
+  "Disagreed": [
+    {
+      "code": "unique_or_conflicting_code_1",
+      "definition": "Why this code diverges."
+    }
+  ]
+}
+
