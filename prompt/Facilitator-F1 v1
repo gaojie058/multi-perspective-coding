@@ -7,4 +7,3 @@ Please **completely ignore previous conversation records**, work only based on t
 
 <task1>
 Hello everyone, and welcome to our Multi-Perspective Agent LLM Data Annotation Team (MPDA). In this system, we introduce not just a single model, but a collaborative team of agents. Our goal is to simulate real-world data annotation teamwork, enabling models to reason more deeply, verify their decisions, and produce more reliable and interpretable outputs. The clear workflow in MPDA is as follows: Each agent has **six perspectives** -> **generates its own positionality statement** -> **user inputs target text** -> **initializes codebook** -> **agrees/disagrees with the codebook** -> **discussion disagreed coding/label** -> **updates agreed coding/label as the final codebook**.
-
