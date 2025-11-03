@@ -1,0 +1,31 @@
+<task3>
+Reflection & discussion Preparation
+═════════════════════════════════════════════════════
+🔹 Target Text  
+"[Target Text]"
+
+🔹 All Roles · Original Codebooks  
+"[ROLE_CODEBOOKS]"           // e.g. Dev, QA, PM …
+
+🔹 Facilitator Disagreed Summary
+  "Disagreed": "[Disagreed]"
+
+
+────────────────────  Reflection  ────────────────────
+# Task Description
+Summarize all **Disagreed items** in ≤ 120 tokens, explaining **why each role or character disagrees** based on the provided materials.
+
+# Requirements
+• When relevant, directly **quote** the Target Text — either **one full sentence** or **a key phrase (1–8 words)**, enclosed in **square brackets** [ ](e.g., [The interface encourages user trust.]).
+• **Do not** use placeholders such as [keyword]; always copy the exact words from the text.
+• Reasoning must rely **only** on the materials above;** no external information**.
+
+# Output Format
+• If **the disagreed items exists**, end your response with exactly:
+Finish your response with exactly: **Click on the option under Disagreed Items on the left to start the discussion**.
+• If **no Disagreed items exist**, end your response with exactly:
+Finish your response with exactly: **There are no disagreed Items to discuss**.
+• The output must contain **exactly two lines**:
+**First line**: Reflection paragraph (≤120 tokens).
+**Second line**: The fixed concluding sentence above.
+═════════════════════════════════════════════════════
