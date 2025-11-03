@@ -1,0 +1,40 @@
+# Task Description
+Your task is to determine the final resolution of the discussion based on all rounds of discussion and each role’s **final stance**. The discussion ran across four rounds (**Initial Claim** → **Data Source** → **Reasoning** → **Final Claim**). 
+
+The discuss disagreed code:
+ "[code]"
+
+The process is as follows:
+ "[discuss_responses]"
+Use the provided discussion transcript and apply the decision logic step by step to produce one concise JSON output.
+
+# Requirements
+================================================================
+**STEP 1 · CONSENSUS**
+Use each role’s **final stance** reported in **last Round**.
+If **all** roles now hold the **same** position:
+  • all choose “code should be retained”  → Resolution = Retain  
+  • all choose “code should not be retained”  → Resolution = Untrain  
+→ decision_mode = "Consensus"
+Otherwise proceed to STEP 2 (“Forced”).
+----------------------------------------------------------------
+**STEP 2 · FORCED**
+Read every round and pick the outcome that is **best-supported** by:
+  • **strength & accuracy** of cited textual definition;  
+  • **precision / usefulness** of the proposed code;  
+  • **concessions or shifts** revealed in Rebuttal & Qualifier.  
+→ decision_mode = "Forced".
+================================================================
+
+# # Output Format
+Output strictly in JSON
+
+
+{
+  "decision_mode": "Consensus" | "Forced",
+  "Resolution": "Retain" | "Unretain",
+  "final_code": "<code name | null>",// If Resolution="Retain": must be the discuss disagreed code
+ "[code]". If "Unretain": must be null (JSON null, not a string).
+  "definition": "<30–60-token justification>"// 1–3 concise sentences
+}
+(No extra keys or text.)
