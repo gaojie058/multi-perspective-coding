@@ -1,7 +1,8 @@
+<F4-task4>
 # Task Description
 Your task is to determine the final resolution of the discussion based on all rounds of discussion and each role’s **final stance**. The discussion ran across four rounds (**Initial Claim** → **Data Source** → **Reasoning** → **Final Claim**). 
 
-The discuss disagreed code:
+The discussion disagreed on code:
  "[code]"
 
 The process is as follows:
@@ -16,7 +17,7 @@ If **all** roles now hold the **same** position:
   • all choose “code should be retained”  → Resolution = Retain  
   • all choose “code should not be retained”  → Resolution = Untrain  
 → decision_mode = "Consensus"
-Otherwise proceed to STEP 2 (“Forced”).
+Otherwise, proceed to STEP 2 (“Forced”).
 ----------------------------------------------------------------
 **STEP 2 · FORCED**
 Read every round and pick the outcome that is **best-supported** by:
@@ -26,7 +27,7 @@ Read every round and pick the outcome that is **best-supported** by:
 → decision_mode = "Forced".
 ================================================================
 
-# # Output Format
+# Output Format
 Output strictly in JSON
 
 
