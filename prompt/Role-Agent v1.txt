@@ -1,4 +1,3 @@
-
 <task>
 # Task Description
 **From your assigned role and positionality**, use professional annotation reasoning to **extract 2–4 concise codes** representing the **central themes and intentions** in the target text.
